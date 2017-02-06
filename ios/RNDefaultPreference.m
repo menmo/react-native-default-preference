@@ -13,7 +13,7 @@ RCT_EXPORT_METHOD(get:(NSString *)key
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 {
-    resolve([[NSUserDefaults standardUserDefaults] stringForKey:key]);
+    resolve([[NSUserDefaults standardUserDefaults] objectForKey:key]);
 }
 
 RCT_EXPORT_METHOD(set:(NSString *)key value:(NSString *)value
